@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Present</title>
+        
+    </head>
+<body>
+<h2> Find the grade of Student.</h2>
+<form>
+<table border="2">
+<tr>
+<td> Enter marks of Maths:</td>
+<td><input type="text" id="m1"/> </td>
+</tr>
+
+<tr>
+    <td>Enter marks of Hindi:</td>
+    <td><input type="text" id="m2"/> </td>
+</tr>
+
+<tr>
+    <td> Enter marks of English:</td>
+    <td><input type="text" id="m3"/> </td>
+</tr>
+
+<tr>
+    <td> Enter marks of Physics:</td>
+    <td><input type="text" id="m4"/> </td>
+</tr>
+
+<tr>
+    <td> Enter marks of Chemistry:</td>
+    <td><input type="text" id="m5"/> </td>
+</tr>
+
+</table>
+</form>
+
+    <input type="button" value="Check" onclick="findGrad(m1.value,m2.value,m3.value,m4.value,m5.value);"/> &nbsp;
+    <h1 id="demo"></h1> 
+    <script>
+
+function findGrad(m1,m2,m3,m4,m5){
+
+        var phy=parseInt(m1);
+        var chem=parseInt(m2);
+        var maths=parseInt(m3);
+        var hindi=parseInt(m4);
+        var english=parseInt(m5);
+        var total;
+        total= phy+chem+maths+hindi+english;
+        var percentage= total/500 *100;
+
+	if(percentage>= 80)
+	{
+	
+    alert(" Grade : A ");
+	}
+	else if(percentage>=60)
+	{
+        alert(" Grade : B ");
+	}
+	else if(percentage>= 40)
+	{
+	    alert(" Grade : C ");
+	}
+	else
+	{
+        alert(" Fail ");
+	}
+    // document.getElementById("demo").innerHTML=getdata; 
+    //     document.write("Total Number is= " + total);
+    //     document.write("<br>");
+    //     document.write("Percentage is= "+percentage);
+	     
+}
+    </script>
+</body>
+</html>
